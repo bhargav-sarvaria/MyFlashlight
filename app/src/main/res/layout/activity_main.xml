@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CECECE"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.fastmonk.flashlight.MainActivity">
 
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/rangeBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isb_indicator_type="circular_bubble"
+        app:isb_progress="50"
+        app:isb_max="5"
+        app:isb_min="0"
+        app:isb_indicator_color="@android:color/black"
+        app:isb_text_color="@android:color/black"
+        app:isb_thumb_color="@android:color/black"
+        app:isb_track_background_bar_color="#9c9c9c"
+        app:isb_track_progress_bar_color="@android:color/black"
+        app:isb_tick_color="#9c9c9c"
+        app:isb_seek_bar_type="discrete_ticks_texts"
+        app:isb_tick_num="6"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:isb_tick_type="oval" />
+
+
+
     <ImageView
-        android:layout_centerInParent="true"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_highlight_off_24dp"
-        android:id="@+id/flashButton"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?attr/selectableItemBackground"
+        android:layout_margin="10dp"
+        android:layout_below="@id/notAvailableText"
+        android:src="@drawable/compass_new"
+        android:layout_width="150dp"
+        android:id="@+id/compass"
+        android:layout_centerHorizontal="true"
+        android:layout_height="150dp" />
+
+    <com.fastmonk.flashlight.CustomTextView
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/rangeBar"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:id="@+id/notAvailableText"
+        android:textColor="@android:color/black"
+        android:text="Compass unavailable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/flashValue"
+        android:contentDescription="@null"
+        android:src="@drawable/unpressed_button"
+        android:id="@+id/flashButton"
+        android:clickable="true"
+        android:layout_marginBottom="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <com.fastmonk.flashlight.CustomTextView
+        android:textSize="18sp"
+        android:id="@+id/flashValue"
+        android:text="OFF"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
     <com.google.android.gms.ads.AdView
         android:layout_marginBottom="2dp"

@@ -4,10 +4,10 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.fastmonk.flashlight"
-        minSdkVersion 21
+        minSdkVersion 15
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -25,6 +25,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
-    compile 'com.google.android.gms:play-services-ads:11.8.0'
+    compile 'com.github.warkiz.widget:indicatorseekbar:1.2.9'
+    compile 'com.github.Abhi347:NoobCameraFlash:0.2.0'
+    compile 'com.google.android.gms:play-services-ads:12.0.1'
 }
